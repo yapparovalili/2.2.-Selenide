@@ -10,8 +10,8 @@ build: off  # будем использовать свой скрипт сбор
 
 install:
   - java -jar ./artifacts/app-card-delivery.jar &
+  - chmod +x gradlew
 
 
 build_script:
   - ./gradlew test --info "-Dselenide.headless=true"
-  - chmod +x gradlew
